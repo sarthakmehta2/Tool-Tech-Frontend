@@ -1,7 +1,7 @@
 function Landingpage(){
     return(
         <div>
-            Welcome to Tool & Tech - Sneha
+            Welcome to Tool & Tech
         </div>
     )
 }
