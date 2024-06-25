@@ -1,6 +1,7 @@
 // Signup.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import {loginbackground} from '../assets/loginbackground'
 
 function Signup() {
   const [username, setUsername] = useState('');
@@ -28,7 +29,7 @@ function Signup() {
             navigate('/admin/app');
         }
         else{
-            alert("Invalod creds")
+            alert("Invalid creds")
         }
     })
 
@@ -39,6 +40,7 @@ function Signup() {
   };
 
   return (
+    <div id='signupcontainer'>
     <div id='signupdiv'>
       <h1>Tool & Tech</h1>
       <h3>Admin Login</h3>
@@ -57,6 +59,7 @@ function Signup() {
         />
         <button id='signupbtn' onClick={handleSignup}>Log In</button>
       </form>
+    </div>
     </div>
   );
 }
