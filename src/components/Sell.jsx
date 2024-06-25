@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import sell from "../assets/sell.png"
 
 export function Sell({filteredInventory}){
     let i =0;
@@ -35,6 +36,7 @@ export function Sell({filteredInventory}){
 
     return(
         <div>
+            <div id="sellcontainer"></div>
         <div id="selldiv">
         
             <div id="sellinputs">

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import purchase from "../assets/purchase.png"
 
 export function Purchase({filteredInventory}){
     let i =0;
@@ -31,6 +32,8 @@ export function Purchase({filteredInventory}){
     }
 
     return(
+        <div>
+        <div id="purchasecontainer"></div>
         <div id="purchaseinputs">
             <input type="text" placeholder="Product Name" onChange={(e)=>{
                 const value = e.target.value;
@@ -75,6 +78,7 @@ export function Purchase({filteredInventory}){
     </tbody>
 
 </table>
+        </div>
         </div>
     )
 

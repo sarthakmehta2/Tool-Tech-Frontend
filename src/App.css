@@ -175,6 +175,10 @@ input[type=text],[type=password] {
 }
 
 #signupdiv{
+  background-image: url('./assets/logo.jpg');
+  background-size: 60px;
+  background-position: top left; 
+  background-repeat: no-repeat;
   width: 23%;
   margin: auto;
   top: 20%;
@@ -234,16 +238,6 @@ img{
   cursor: pointer;
 }
 
-/* input[type=text],[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-} */
-
 .sidebtn {
   width: 100%;
   background-color: #030a5b;
@@ -285,3 +279,55 @@ img{
   table-layout: auto;
 }
 
+#signupcontainer{
+  background-image: url('./assets/loginbackground.png');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#purchasecontainer{
+  background-image: url('./assets/purchase.png');
+  background-size: cover;
+  background-position: center;
+  height: 45vh;
+  width: 30vh;
+  float: right;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  top: 20%;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+#sellcontainer{
+  background-image: url('./assets/sell.png');
+  background-size: cover;
+  background-position: center;
+  height: 15vh;
+  width: 20vh;
+  float: right;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  top: 20%;
+  border-radius: 5px;
+  padding: 20px;
+
+}
+
+#inventoryimg{
+  background-image: url('./assets/inventory.png');
+  background-position: center;
+  background-size: cover;
+  width: 35vh;
+  height: 15vh;
+  float: right;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+  top: 20%;
+  border-radius: 5px;
+  padding: 50px;
+}

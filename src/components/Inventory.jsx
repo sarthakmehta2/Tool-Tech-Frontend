@@ -1,8 +1,13 @@
+import inventory from "../assets/inventory.png"
+
 export function Inventory({stock, filteredInventory, totalval}){
 
     let i =0;
     return(
         <div>
+            <div id="inventoryimg">
+
+            </div>
                 <h2>Total Inventory Valus Excl GST: {totalval}</h2>         
             <table>
             <thead>
