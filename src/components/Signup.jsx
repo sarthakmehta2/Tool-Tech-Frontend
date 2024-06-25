@@ -6,11 +6,12 @@ function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
+  const url = "https://tool-tech-backend.onrender.com";
 
   const handleSignup = async (e) => {
     e.preventDefault();
    try{
-    const response = fetch("http://localhost:3001/login", {
+    const response = fetch(url+"/login", {
         method: "POST",
         headers: {
             "content-type": "application/json"
