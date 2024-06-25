@@ -30,7 +30,7 @@ function App() {
   const [aggregatedSalesArray, setAggregatedSalesArray] = useState([]);
 
   useEffect(()=>{
-    fetch("http://localhost:3001/inventory")
+    fetch(url+"/inventory")
     .then(async function(res){
       const json = await res.json();
       setInventory(json.list);
@@ -44,7 +44,7 @@ function App() {
   },[]);
 
   useEffect(()=>{
-    fetch("http://localhost:3001/salesregister")
+    fetch(url+"/salesregister")
     .then(async function(res){
       const json = await res.json();
       setSalehightolow(json.salehightolow);
@@ -62,7 +62,7 @@ function App() {
 }
 
   useEffect(()=>{
-    fetch("http://localhost:3001/salesregister")
+    fetch(url+"/salesregister")
     .then(async function(res){
       const json = await res.json();
       setSalesregister(json.list);
