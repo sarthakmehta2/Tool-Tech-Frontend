@@ -285,7 +285,7 @@ img{
   table-layout: auto;
 }
 
-#signupcontainer{
+/* #signupcontainer{
   background-image: url('./assets/loginbackground.png');
   background-size: cover;
   background-position: center; /* Centers the image */
@@ -294,4 +294,4 @@ img{
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 
-}
+} */

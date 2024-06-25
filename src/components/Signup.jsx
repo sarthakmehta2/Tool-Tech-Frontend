@@ -1,7 +1,7 @@
 // Signup.jsx
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import {loginbackground} from '../assets/loginbackground'
+// import {loginbackground} from '../assets/loginbackground.png'
 
 function Signup() {
   const [username, setUsername] = useState('');
