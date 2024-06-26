@@ -2,9 +2,9 @@ import arrow from '../assets/arrow.png'
 
 export function Salesregister({sales}){
     let i =0;
-
+    const url = "https://tool-tech-backend.onrender.com";
     const handleundo = function(product,qty, purchase, id){
-        fetch("http://localhost:3001/create",{
+        fetch(url+"/create",{
             method: "POST",
             headers: {
                 "content-type": "application/json"
@@ -22,7 +22,7 @@ export function Salesregister({sales}){
             alert("Failed to undo");  
         })
 
-        fetch("http://localhost:3001/deletesales",{
+        fetch(url+"/deletesales",{
             method: "PUT",
             headers:{
                 "content-type":"application/json"

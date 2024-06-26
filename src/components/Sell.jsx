@@ -8,11 +8,11 @@ export function Sell({filteredInventory}){
     const [qty, setQty] = useState("");
     const [price, setPrice] = useState("");
 
-
+    const url = "https://tool-tech-backend.onrender.com";
 
 
     const handleSellBtn = function(){
-        fetch("http://localhost:3001/sales",{
+        fetch(url+"/sales",{
             method: "POST",
             body: JSON.stringify({
                 product: product,

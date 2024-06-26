@@ -8,8 +8,10 @@ export function Purchase({filteredInventory}){
     const [qty, setQty] = useState("");
     const [price, setPrice] = useState("");
 
+    const url = "https://tool-tech-backend.onrender.com";
+
     const handlePurchseBtn = function(){
-        fetch("http://localhost:3001/create",{
+        fetch(url+"/create",{
             method: "POST",
             body: JSON.stringify({
                 product: product,
