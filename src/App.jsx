@@ -14,8 +14,8 @@ import { Salesanalysis } from './components/Salesanalysis'
 function App() {
 
   // const url = "http://localhost:3001";
-  // const url = "https://tool-tech-backend.onrender.com";
-  const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";
+  const url = "https://tool-tech-backend.onrender.com";
+  // const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";
 
 
   const [inventory, setInventory] = useState([]);
