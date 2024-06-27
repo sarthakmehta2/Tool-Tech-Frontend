@@ -7,7 +7,7 @@ function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const navigate = useNavigate();
-  const url = "https://tool-tech-backend.onrender.com";
+  const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";
 
   const handleSignup = async (e) => {
     e.preventDefault();

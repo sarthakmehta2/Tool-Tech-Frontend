@@ -2,7 +2,7 @@ import arrow from '../assets/arrow.png'
 
 export function Salesregister({sales}){
     let i =0;
-    const url = "https://tool-tech-backend.onrender.com";
+    const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";
     const handleundo = function(product,qty, purchase, id){
         fetch(url+"/create",{
             method: "POST",

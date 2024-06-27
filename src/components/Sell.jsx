@@ -8,7 +8,7 @@ export function Sell({filteredInventory}){
     const [qty, setQty] = useState("");
     const [price, setPrice] = useState("");
 
-    const url = "https://tool-tech-backend.onrender.com";
+    const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";;
 
 
     const handleSellBtn = function(){
