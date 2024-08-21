@@ -331,3 +331,17 @@ img{
   border-radius: 5px;
   padding: 50px;
 }
+
+.excelbtn {
+  background-color: #030a5b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.excelbtn:hover {
+  background-color: #030a5b;
+}

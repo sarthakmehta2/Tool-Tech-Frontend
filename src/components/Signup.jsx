@@ -6,6 +6,7 @@ import loginbackground from '../assets/loginbackground.png'
 function Signup() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [isAuthenticated, setIsauthenticated] = useState(false);
   const navigate = useNavigate();
   const url = process.env.NODE_ENV === 'production' ? "https://tool-tech-backend.onrender.com" : "http://localhost:3001";
 
@@ -26,9 +27,11 @@ function Signup() {
         const json = await res.json();
         console.log(json);
         if(json.success){
+          setIsauthenticated(true);
             navigate('/admin/app');
         }
         else{
+          setIsauthenticated(false);
             alert("Invalid creds")
         }
     })

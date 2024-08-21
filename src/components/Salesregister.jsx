@@ -1,4 +1,5 @@
 import arrow from '../assets/arrow.png'
+import * as XLSX from 'xlsx';
 
 export function Salesregister({sales}){
     let i =0;
@@ -42,8 +43,28 @@ export function Salesregister({sales}){
         
     }
 
+    const exportToExcel = () => {
+        const worksheetData = sales.map((item, index) => ({
+            "Sr No": index + 1,
+            "Date": item.date,
+            "Item Name": item.product,
+            "Qty Sold": item.qty,
+            "Sales Price": item.sales,
+            "Purchase Price": item.purchase,
+            "Profit": item.profit
+
+        }));
+
+        const worksheet = XLSX.utils.json_to_sheet(worksheetData);
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Sales Register");
+
+        XLSX.writeFile(workbook, "Sales_Register.xlsx");
+    };
+
     return(
         <div id="abc"> 
+         <button className="excelbtn" onClick={exportToExcel}>Export to Excel</button> {/* Button to trigger export */}  
             <table id="def">
                 <thead>
                     <tr>
